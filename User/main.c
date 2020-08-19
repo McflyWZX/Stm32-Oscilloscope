@@ -75,15 +75,15 @@ void GUI_INIT()
 }
 int main(void)
 {
-    /* USART1 config 115200 8-N-1 */
-    Key_GPIO_Config(GPIOE, GPIO_Pin_0, RCC_APB2Periph_GPIOE);
-    Key_GPIO_Config(GPIOC, GPIO_Pin_13, RCC_APB2Periph_GPIOC);
+	/* USART1 config 115200 8-N-1 */
+	Key_GPIO_Config(GPIOE, GPIO_Pin_0, RCC_APB2Periph_GPIOE);
+	Key_GPIO_Config(GPIOC, GPIO_Pin_13, RCC_APB2Periph_GPIOC);
 	delay_init();
-    ADC1_Init();
+	ADC1_Init();
 	LCD_Init();
 	LCD_Display_Dir(1);	
 	LCD_Clear(BLACK);
-    GUI_INIT();
+	GUI_INIT();
 	Delay(0x99);
 
 	ADC_SoftwareStartConvCmd(ADC1, DISABLE); 
@@ -133,5 +133,5 @@ int main(void)
 
 void Delay(__IO u32 nCount)
 {
-    for (; nCount != 0; nCount--);
+	for (; nCount != 0; nCount--);
 }
